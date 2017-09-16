@@ -11,8 +11,8 @@ import javax.swing.JFrame;
 public class CGoLWindow extends JFrame
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
-
+    private int x = 300;
+    private int y = 500;
     /**
      * Konstruktor für Objekte der Klasse CGoLWindow
      */
@@ -20,7 +20,7 @@ public class CGoLWindow extends JFrame
     {
       //Create  
       JFrame frame = new JFrame("Swing");
-      frame.setSize(300, 300);
+      frame.setSize(x, y);
       frame.setVisible(true);
     }
 }
