@@ -30,4 +30,12 @@ public class CGoLWorld
         // tragen Sie hier den Code ein
         return x + y;
     }
+    
+    /**
+     * Erzeuge ein Spielfeld
+     */
+    public int Spielfeld (int (x,y) )
+    {
+    
+    }
 }
