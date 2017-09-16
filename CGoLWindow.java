@@ -2,8 +2,8 @@
 /**
  * Beschreiben Sie hier die Klasse CGoLWindow.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author (Dominick K.) 
+ * @version (Window 0.1)
  */
 public class CGoLWindow
 {
