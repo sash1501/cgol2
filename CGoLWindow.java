@@ -19,6 +19,8 @@ public class CGoLWindow extends JFrame
     public CGoLWindow()
     {
       //Create  
-      JFrame frame = new JFrame("Swing");  
+      JFrame frame = new JFrame("Swing");
+      frame.setSize(300, 300);
+      frame.setVisible(true);
     }
 }

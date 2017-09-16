@@ -7,7 +7,7 @@
  */
 public class CGoLMain
 {
-    public static void Main(String[] args){
+    public static void main(String [] args){
     	CGoLWindow cgolwin = new CGoLWindow();
     }
 }
