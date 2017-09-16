@@ -10,17 +10,20 @@ import javax.swing.JFrame;
 
 public class CGoLWindow extends JFrame
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x = 300;
-    private int y = 500;
+    // privat muss ersetzt werden 
+    private int x = 0;
+    private int y = 0;
+    private int width = 500;
+    private int height = 500;
+   
     /**
-     * Konstruktor fÃ¼r Objekte der Klasse CGoLWindow
+     * Konstruktor für Objekte der Klasse CGoLWindow
      */
     public CGoLWindow()
     {
-      //Create  
-      JFrame frame = new JFrame("Swing");
-      frame.setSize(x, y);
+      //Create frame mit Position(x,y) & Größe(width,height)
+      JFrame frame = new JFrame("World of Life");
+      frame.setBounds(x, y, width, height);
       frame.setVisible(true);
     }
 }
