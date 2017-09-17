@@ -10,18 +10,22 @@ import javax.swing.JFrame;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-public class CGoLWindow extends JFrame
+public class CGoLWindow extends JFrame implements ActionListener 
 {
     // privat muss ersetzt werden 
     private int x = 0;
     private int y = 0;
-    private int width = 500;
-    private int height = 500;
+    private int width = 100;
+    private int height = 100;
+    private int countOfBeings = 15;
     private JButton button1; 
     private CGoLWorld world;
+    
     /**
      * Konstruktor für Objekte der Klasse CGoLWindow
      */
@@ -29,9 +33,9 @@ public class CGoLWindow extends JFrame
     {
     	setTitle("World of Life");
 
-      
-    	//Button1
+       	//Button1
     	button1 = new JButton("Start");
+    	button1.addActionListener(this);
       
     	// Get the reference of  the   content  pane
     	Container contentPane = getContentPane();
@@ -41,4 +45,10 @@ public class CGoLWindow extends JFrame
     	setBounds(x, y, width, height);
     	setVisible(true);
     }
+    
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == button1) {
+			world = new CGoLWorld(width, height, countOfBeings);
+		}
+	}
 }

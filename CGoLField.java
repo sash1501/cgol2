@@ -27,4 +27,20 @@ public class CGoLField {
 		this.cgolbeing = cgolbeing;
 		this.fieldtype = fieldtype;
 	}
+
+	public CGoLBeing getCgolbeing() {
+		return cgolbeing;
+	}
+
+	public void setCgolbeing(CGoLBeing cgolbeing) {
+		this.cgolbeing = cgolbeing;
+	}
+
+	public int getFieldtype() {
+		return fieldtype;
+	}
+
+	public void setFieldtype(int fieldtype) {
+		this.fieldtype = fieldtype;
+	}
 }

@@ -29,5 +29,46 @@ public class CGoLWorld
     	this.height = height;
     	this.countOfBeings = countOfBeings;
     	this.playground = new CGoLField[this.width][this.height];
+    	System.out.println("Es werde Licht!");
     }
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public int getCountOfBeings() {
+		return countOfBeings;
+	}
+
+	public void setCountOfBeings(int countOfBeings) {
+		this.countOfBeings = countOfBeings;
+	}
+
+	public LinkedList<CGoLBeing> getListOfBeings() {
+		return listOfBeings;
+	}
+
+	public void setListOfBeings(LinkedList<CGoLBeing> listOfBeings) {
+		this.listOfBeings = listOfBeings;
+	}
+
+	public CGoLField[][] getPlayground() {
+		return playground;
+	}
+
+	public void setPlayground(CGoLField[][] playground) {
+		this.playground = playground;
+	}
 }
