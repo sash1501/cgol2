@@ -49,6 +49,7 @@ public class CGoLWindow extends JFrame implements ActionListener
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == button1) {
 			world = new CGoLWorld(width, height, countOfBeings);
+			System.out.println(world.toString());
 		}
 	}
 }

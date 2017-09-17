@@ -3,6 +3,9 @@ public class CGoLField {
 
 	public static final int PLAIN = 0;
 	public static final int MOUNTAIN = 1;
+	public static final int DESERT = 2;
+	public static final int ICE = 3;
+	public static final int GRASS = 4;
 	// weitere Ebenentypen als Konstanten deklarieren
 	
 	private CGoLBeing cgolbeing;

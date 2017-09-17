@@ -7,33 +7,27 @@ import survivalstrategy.*;
  */
 public class CGoLBeing
 {
-	// species = what kind of species do we have? (SurvivalStrategy)
-    private CGoLSpecies species;
-    private int tribe;
-    
-    /**
-     * Constructor for CGoLBeing
-     */
-    public CGoLBeing()
+	private String name;
+	
+    public CGoLBeing(String name)
     {
-    	species = new CGoLSpecies();
-    	tribe = 0;  // 0 = fauna
+    	this.name = name;
     }
 
-    public void setSpecies(CGoLSpecies species) {
-    	this.species = species;
-    }
+	public String toString() {
+		return "CGoLBeing [name = " + name + "]";
+	}
     
-    public CGoLSpecies getSpecies() {
-    	return species;
-    }
+    	
+    	
+    // --- Getter und Setter für die private-Variablen ---
     
-    public void setTribe(int tribe) {
-    	this.tribe = tribe;
-    }
-    
-    public int getTribe() {
-    	return tribe;
-    }
-    
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 }
