@@ -21,7 +21,7 @@ public class CGoLWorld
     	this.width = 100;
     	this.height = 100;
     	this.countOfBeings = 15;
-    	this.playground = new CGoLField[width][height];
+    	createWorld();
     	populateWorld();
     	System.out.println("Es werde Licht - Standard.");
     }
@@ -33,6 +33,7 @@ public class CGoLWorld
     	this.height = height;
     	this.countOfBeings = countOfBeings;
     	this.playground = new CGoLField[this.width][this.height];
+    	createWorld();
     	populateWorld();
     	System.out.println("Es werde Licht!");
     }
@@ -40,10 +41,23 @@ public class CGoLWorld
 	public String toString() {
 		return "CGoLWorld [width = " + width + " , height = " + height + " , countOfBeings = " + countOfBeings + "]";
 	}
+	
+	private void createWorld() {
+    	this.playground = new CGoLField[width][height];
+    	for(int i = 0; i < width; i++) {
+    		for(int j = 0; j < height; j++) {
+    			playground[i][j] = new CGoLField(i,j);
+    		}
+    	}
+	}
 
 	private void populateWorld() {
     	for(int i = 0; i < countOfBeings; i++) {
     		listOfBeings.add(new CGoLBeing("fauna"+i));
+    		
+    	// Zufallsgenerator für die Platzierung anschmeißen, um
+    	// LinkedListBeings in playground zu platzieren.
+    		
     	}
     	
     	for(int i = 0; i < listOfBeings.size(); i++) {

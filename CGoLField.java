@@ -10,10 +10,19 @@ public class CGoLField {
 	
 	private CGoLBeing cgolbeing;
 	private int fieldtype;
+	private int xPos;
+	private int yPos;
 	
 	public CGoLField () {
 		cgolbeing = null;
 		fieldtype = PLAIN;
+	}
+	
+	public CGoLField (int xPos, int yPos) {
+		cgolbeing = null;
+		fieldtype = PLAIN;
+		this.xPos = xPos;
+		this.yPos = yPos;
 	}
 	
 	public CGoLField(int fieldtype) {
@@ -45,5 +54,21 @@ public class CGoLField {
 
 	public void setFieldtype(int fieldtype) {
 		this.fieldtype = fieldtype;
+	}
+
+	public int getxPos() {
+		return xPos;
+	}
+
+	public void setxPos(int xPos) {
+		this.xPos = xPos;
+	}
+
+	public int getyPos() {
+		return yPos;
+	}
+
+	public void setyPos(int yPos) {
+		this.yPos = yPos;
 	}
 }
