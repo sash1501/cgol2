@@ -71,4 +71,12 @@ public class CGoLField {
 	public void setyPos(int yPos) {
 		this.yPos = yPos;
 	}
+	
+	public boolean isEmpty() {
+		if (cgolbeing == null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

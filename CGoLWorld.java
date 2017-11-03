@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 /**
  * CGolWorld ist die Welt, in der unser Game of Life stattfindet.
@@ -36,6 +37,7 @@ public class CGoLWorld
     	createWorld();
     	populateWorld();
     	System.out.println("Es werde Licht!");
+    	showWorldToConsole();
     }
 
 	public String toString() {
@@ -54,17 +56,44 @@ public class CGoLWorld
 	private void populateWorld() {
     	for(int i = 0; i < countOfBeings; i++) {
     		listOfBeings.add(new CGoLBeing("fauna"+i));
-    		
+   		
+    	}
+
     	// Zufallsgenerator für die Platzierung anschmeißen, um
     	// LinkedListBeings in playground zu platzieren.
-    		
-    	}
     	
+    	ListIterator listit = listOfBeings.listIterator();
+    			
+    	while(listit.hasNext()) {
+    		
+    		while(true) {
+    			int zufall1 = (int)(Math.random()*countOfBeings);
+    			int zufall2 = (int)(Math.random()*countOfBeings);
+    		
+    			if((playground[zufall1][zufall2]).isEmpty()) {
+    				(playground[zufall1][zufall2]).setCgolbeing((CGoLBeing)(listit.next()));
+    				break;
+    			}
+    		}
+    	}
+    	 	
     	for(int i = 0; i < listOfBeings.size(); i++) {
     		System.out.println(listOfBeings.get(i).toString());
     	}
     }
     
+	private void showWorldToConsole() {
+    	for(int i = 0; i < height; i++) {
+    		for(int j = 0; j < width; j++) {
+    			if((playground[j][i]).isEmpty()) {
+    				System.out.printf("_");
+    			} else {
+    				System.out.printf("X");
+    			}
+    		}
+    		System.out.printf("\n");
+    	}
+	}
     
     // --- Getter und Setter für die private-Variablen ---
     
